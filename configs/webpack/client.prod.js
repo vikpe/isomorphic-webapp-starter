@@ -5,7 +5,7 @@ const webpack   = require('webpack');
 const commonClientConfig = require('./client.common');
 
 module.exports = merge(commonClientConfig, {
-  entry: './client/index.jsx',
+  entry: './client/index.prod.jsx',
   devtool: 'source-map',
   plugins: [
     new webpack.LoaderOptionsPlugin({

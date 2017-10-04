@@ -1,10 +1,14 @@
-// shared config (dev and prod)
-const webpack         = require('webpack');
+// shared client config (dev and prod)
 const {resolve}       = require('path');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
-  context: resolve(__dirname, 'src'),
+  context: resolve(__dirname, '../../src'),
+  output: {
+    filename: 'client.min.js',
+    path: resolve(__dirname, '../../dist/public'),
+    publicPath: '/' // necessary for HMR to know where to load the hot update chunks
+  },
   resolve: {
     extensions: ['.js', '.jsx'],
   },

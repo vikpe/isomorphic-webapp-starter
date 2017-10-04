@@ -1,17 +1,11 @@
 // production config
 const merge     = require('webpack-merge');
 const webpack   = require('webpack');
-const {resolve} = require('path');
 
-const commonConfig = require('./webpack.config.common');
+const commonClientConfig = require('./client.common');
 
-module.exports = merge(commonConfig, {
-  entry: './client/index.js',
-  output: {
-    filename: 'client.min.js',
-    path: resolve(__dirname, 'dist/public'),
-    publicPath: '/',
-  },
+module.exports = merge(commonClientConfig, {
+  entry: './client/index.jsx',
   devtool: 'source-map',
   plugins: [
     new webpack.LoaderOptionsPlugin({

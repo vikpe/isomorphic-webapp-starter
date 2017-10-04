@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "description": "awesome stuff",
   "scripts": {
-    "build": "webpack -p --env=prod",
+    "build": "npm run build-backend && npm run build-frontend",
+    "build-client": "webpack -p --env=client.prod",
+    "build-server": "webpack -p --env=server.prod",
     "lint": "npm run lint:js && npm run lint:sass",
-    "lint:js": "jshint",
+    "lint:js": "eslint src/**/*.js*",
     "lint:sass": "stylelint ./src/client/**/*.scss",
     "start": "npm run start-dev",
-    "start-dev": "webpack-dev-server --config=webpack.config.dev.js",
-    "start-prod": "npm run build && node express.js",
-    "test": "jest --watch --coverage"
+    "start-dev": "webpack-dev-server --env=client.dev",
+    "start-backend-dev": "node src/server/express.js",
+    "start-backend-prod": "node dist/server.js"
   },
   "author": "Viktor Persson",
   "license": "MIT",

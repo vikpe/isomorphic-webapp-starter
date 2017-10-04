@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/vikpe/dotbot#readme",
   "devDependencies": {
+    "express": "^4.16.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   }

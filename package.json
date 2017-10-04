@@ -1,0 +1,23 @@
+{
+  "name": "dotbot",
+  "version": "0.1.0",
+  "description": "awesome stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikpe/dotbot.git"
+  },
+  "author": "Viktor Persson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vikpe/dotbot/issues"
+  },
+  "homepage": "https://github.com/vikpe/dotbot#readme",
+  "devDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}

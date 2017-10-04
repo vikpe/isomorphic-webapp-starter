@@ -1,4 +1,4 @@
-// production config
+// client production config
 const merge     = require('webpack-merge');
 const webpack   = require('webpack');
 

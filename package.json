@@ -28,6 +28,8 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
+    "eslint": "^4.8.0",
+    "eslint-plugin-react": "^7.4.0",
     "express": "^4.16.1",
     "file-loader": "^1.1.4",
     "image-webpack-loader": "^3.4.2",
@@ -47,7 +49,17 @@
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
-  "jshintConfig": {
-    "esversion": 6
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "ecmaFeatures": {"jsx": true},
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react"
+    ]
   }
 }

@@ -69,5 +69,8 @@
     "plugins": [
       "react"
     ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
   }
 }

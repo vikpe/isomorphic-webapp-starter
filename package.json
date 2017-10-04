@@ -2,30 +2,52 @@
   "name": "dotbot",
   "version": "0.1.0",
   "description": "awesome stuff",
-  "main": "index.js",
   "scripts": {
-    "test": "test"
+    "build": "webpack -p --env=prod",
+    "lint": "npm run lint:js && npm run lint:sass",
+    "lint:js": "jshint",
+    "lint:sass": "stylelint ./src/client/**/*.scss",
+    "start": "npm run start-dev",
+    "start-dev": "webpack-dev-server --config=webpack.config.dev.js",
+    "start-prod": "npm run build && node express.js",
+    "test": "jest --watch --coverage"
   },
+  "author": "Viktor Persson",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vikpe/dotbot.git"
   },
-  "author": "Viktor Persson",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/vikpe/dotbot/issues"
   },
   "homepage": "https://github.com/vikpe/dotbot#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
     "express": "^4.16.1",
+    "file-loader": "^1.1.4",
+    "image-webpack-loader": "^3.4.2",
+    "jshint": "^2.9.5",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "stylelint": "^8.1.1",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-webpack-plugin": "^0.9.0",
     "webpack": "^3.6.0",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
+  },
+  "jshintConfig": {
+    "esversion": 6
   }
 }

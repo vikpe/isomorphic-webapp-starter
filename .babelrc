@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "env",
+    "react" // Transpile React components to JavaScript
+  ],
+  "plugins": [
+    "react-hot-loader/babel" // Enables React code to work with HMR.
+  ],
+  "env": {
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
+}

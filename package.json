@@ -5,8 +5,8 @@
   "scripts": {
     "start": "npm run start-dev",
     "build": "concurrently \"npm run build-client\" \"npm run build-server\"",
-    "build-client": "webpack -p --env=client.prod",
-    "build-server": "webpack -p --env=server.prod",
+    "build-client": "webpack -p --progress --env=client.prod",
+    "build-server": "webpack -p --progress --env=server.prod",
     "start-dev": "concurrently \"npm run start-client-dev\" \"npm run start-server-dev\"",
     "start-prod": "npm run build && npm run start-server-prod",
     "start-client-dev": "webpack-dev-server --env=app.dev",

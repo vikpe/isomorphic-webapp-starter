@@ -41,6 +41,7 @@
     "file-loader": "^1.1.5",
     "image-webpack-loader": "^3.4.2",
     "jshint": "^2.9.5",
+    "mongoose": "^4.12.0",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "react": "^16.0.0",

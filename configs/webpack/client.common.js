@@ -5,7 +5,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 module.exports = {
   context: resolve(__dirname, '../../src'),
   output: {
-    filename: 'client.min.js',
+    filename: 'js/client.min.js',
     path: resolve(__dirname, '../../dist/public'),
     publicPath: '/' // necessary for HMR to know where to load the hot update chunks
   },

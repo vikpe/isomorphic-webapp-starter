@@ -1,6 +1,6 @@
 // client production config
-const merge     = require('webpack-merge');
-const webpack   = require('webpack');
+const merge   = require('webpack-merge');
+const webpack = require('webpack');
 
 const commonClientConfig = require('./client.common');
 

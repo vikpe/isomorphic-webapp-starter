@@ -5,7 +5,7 @@ import {AppContainer} from 'react-hot-loader';
 import App from './components/App';
 import store from './store';
 
-const rootEl = document.getElementById('root');
+const rootEl = document.getElementById('app-root');
 
 const renderComponent = (Component) => {
   ReactDOM.render(

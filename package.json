@@ -1,5 +1,5 @@
 {
-  "name": "dotbot",
+  "name": "isomorphic-webapp-starter",
   "version": "0.1.0",
   "description": "Minimal starter kit with hot module replacement (HMR) for rapid development.",
   "scripts": {
@@ -7,8 +7,9 @@
     "build": "concurrently \"npm run build-client\" \"npm run build-server\"",
     "build-client": "webpack -p --env=client.prod",
     "build-server": "webpack -p --env=server.prod",
-    "start-dev": "webpack-dev-server --env=app.dev",
+    "start-dev": "concurrently \"npm run start-client-dev\" \"npm run start-server-dev\"",
     "start-prod": "npm run build && npm run start-server-prod",
+    "start-client-dev": "webpack-dev-server --env=app.dev",
     "start-server-dev": "node src/server/express.js",
     "start-server-prod": "node dist/server.min.js",
     "lint": "npm run lint:js && npm run lint:sass",
@@ -19,12 +20,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vikpe/dotbot.git"
+    "url": "git+https://github.com/vikpe/isomorphic-webapp-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/vikpe/dotbot/issues"
+    "url": "https://github.com/vikpe/isomorphic-webapp-starter/issues"
   },
-  "homepage": "https://github.com/vikpe/dotbot#readme",
+  "homepage": "https://github.com/vikpe/isomorphic-webapp-starter#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",

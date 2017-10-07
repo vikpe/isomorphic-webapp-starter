@@ -12,3 +12,5 @@ app.use(express.static(publicDir)); // serve static content
 app.listen(portNumber, () => {
   console.log(chalk`{green.bold Server started:} {white http://localhost:${portNumber}} {grey (/${publicDir}/)}`);
 });
+import database from './database';
+database.connect();

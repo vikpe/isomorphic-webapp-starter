@@ -1,5 +1,5 @@
 # Isomorphic Webapp Starter
-Minimal starter kit with hot module replacement (HMR) for rapid development.
+Isomorphic web application starter with hot module replacement (HMR) for rapid development.
 
 * **[React](https://facebook.github.io/react/)** (16.x)
 * **[Redux](http://redux.js.org/)**

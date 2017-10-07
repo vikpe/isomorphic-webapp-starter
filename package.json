@@ -1,7 +1,7 @@
 {
   "name": "isomorphic-webapp-starter",
   "version": "0.1.0",
-  "description": "Minimal starter kit with hot module replacement (HMR) for rapid development.",
+  "description": "Isomorphic web application starter with hot module replacement (HMR) for rapid development.",
   "scripts": {
     "start": "npm run start-dev",
     "build": "concurrently \"npm run build-client\" \"npm run build-server\"",

@@ -1,8 +1,7 @@
 import React from 'react';
-
-require('!style-loader!css-loader!sass-loader!../assets/scss/App.scss');
-
-const reactLogo = require('../assets/img/react_logo.svg');
+import '!style-loader!css-loader!sass-loader!../assets/scss/App.scss';
+import reactLogo from '../assets/img/react_logo.svg';
+import TodoListContainer from './../containers/TodoListContainer';
 
 class App extends React.PureComponent {
   render() {

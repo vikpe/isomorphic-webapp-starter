@@ -5,7 +5,7 @@ const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = {
   target: 'node',
-  entry: './src/server/express.js',
+  entry: './src/server/index.js',
   output: {
     filename: 'server.min.js',
     path: resolve(__dirname, '../../dist'),

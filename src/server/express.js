@@ -3,16 +3,16 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import compression from 'compression';
 
-const app        = express();
-const portNumber = 3000;
-const publicDir  = 'dist/public';
+const config = {
+  portNumber: 3000,
+  publicDir: 'dist/public',
+};
 
-app.use(bodyParser.json()); // Parse incoming request bodies as JSON (available under request.body)
-app.use(compression()); // compress all responses
-app.use(express.static(publicDir)); // serve static content 
+const server = express();
+server.use(express.static(config.publicDir)); // serve static content
+server.use(bodyParser.json()); // Parse incoming request bodies as JSON (available under request.body)
+server.use(compression()); // compress all responses
 
-app.listen(portNumber, () => {
-  console.log(chalk`{green.bold Server started:} {white http://localhost:${portNumber}} {grey (/${publicDir}/)}`);
+server.listen(config.portNumber, () => {
+  console.log(chalk`{green.bold Server started:} {white http://localhost:${config.portNumber}} {grey (/${config.publicDir}/)}`);
 });
-import database from './database';
-database.connect();

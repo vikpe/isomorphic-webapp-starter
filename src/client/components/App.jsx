@@ -8,8 +8,10 @@ class App extends React.PureComponent {
     return (
         <div className="app">
           <img src={reactLogo}/>
-          <h1>Isomorphic Webapp Starter</h1>          
-          <p>Isomorphic web application starter with hot module replacement (HMR) for rapid development.</p>          
+          <h1>Isomorphic Webapp Starter</h1>
+          <p>Isomorphic web application starter with hot module replacement (HMR) for rapid development.</p>
+          <hr/>
+          <TodoListContainer/>
         </div>
     );
   }

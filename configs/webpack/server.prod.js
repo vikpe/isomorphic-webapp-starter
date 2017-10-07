@@ -10,11 +10,15 @@ module.exports = {
     filename: 'server.min.js',
     path: resolve(__dirname, '../../dist'),
   },
+  resolve: {
+    extensions: ['.js'],
+    modules: [resolve(__dirname, 'src'), 'node_modules'],
+  },
   devtool: 'source-map',
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         use: ['babel-loader'],
         exclude: /node_modules/,
       },

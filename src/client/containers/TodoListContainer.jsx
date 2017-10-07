@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import TodoList from '../components/TodoList';
 
 class TodoListContainer extends React.Component {
@@ -7,16 +8,14 @@ class TodoListContainer extends React.Component {
   }
 
   render() {
-    const items = [
-      {title: 'alpha'},
-      {title: 'beta'},
-      {title: 'gamma'},
-    ];
-
     return (
-        <TodoList items={items}/>
+        <TodoList items={this.props.items}/>
     );
   }
 }
 
-export default TodoListContainer;
+const mapStateToProps = (state) => ({
+  items: state.items,
+});
+
+export default connect(mapStateToProps)(TodoListContainer);

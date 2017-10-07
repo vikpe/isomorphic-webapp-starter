@@ -9,12 +9,18 @@ const config = {
   publicDir: 'dist/public',
 };
 
-const server = express();
-server.use(express.static(config.publicDir)); // serve static content
-server.use(bodyParser.json()); // Parse incoming request bodies as JSON (available under request.body)
-server.use(compression()); // compress all responses
-server.use('/api', ApiRouter); // routes for API
+const app = express();
+app.use((request, response, next) => {
+  response.header('Access-Control-Allow-Origin', 'http://localhost:8080');
+  response.header('Access-Control-Allow-Headers', 'X-Requested-With');
+  response.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS');
+  next();
+});
+app.use(express.static(config.publicDir)); // serve static content
+app.use(bodyParser.json()); // Parse incoming request bodies as JSON (available under request.body)
+app.use(compression()); // compress all responses
+app.use('/api', ApiRouter); // routes for API
 
-server.listen(config.portNumber, () => {
+app.listen(config.portNumber, () => {
   console.log(chalk`{green.bold Server started:} {white http://localhost:${config.portNumber}} {grey (/${config.publicDir}/)}`);
 });

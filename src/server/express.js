@@ -1,9 +1,10 @@
-const chalk       = require('chalk');
-const express     = require('express');
-const compression = require('compression');
-const app         = express();
-const portNumber  = 3000;
-const publicDir   = 'dist/public';
+import chalk from 'chalk';
+import express from 'express';
+import compression from 'compression';
+
+const app        = express();
+const portNumber = 3000;
+const publicDir  = 'dist/public';
 
 app.use(compression()); // compress all responses
 app.use(express.static(publicDir)); // serve static content 

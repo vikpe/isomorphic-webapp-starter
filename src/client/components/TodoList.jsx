@@ -4,10 +4,14 @@ import TodoListItem from './TodoListItem';
 
 class TodoList extends React.PureComponent {
   render() {
+    const {
+      onDeleteClick,
+    } = this.props;
+
     return (
         <div className="app-todo-list">
           {
-            this.props.items.map(item => <TodoListItem item={item}/>)
+            this.props.items.map(item => <TodoListItem onDeleteClick={onDeleteClick} item={item}/>)
           }
         </div>
     );
@@ -15,6 +19,7 @@ class TodoList extends React.PureComponent {
 }
 
 TodoList.propTypes = {
+  onDeleteClick: PropTypes.func,
   items: PropTypes.array,
 };
 

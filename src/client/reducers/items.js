@@ -1,11 +1,16 @@
-const initialState = [
-  {title: 'alpha'},
-  {title: 'beta'},
-  {title: 'gamma'},
-];
+import * as actionTypes from '../actionsTypes';
+
+const initialState = [];
 
 const itemReducer = (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case actionTypes.RECEIVE_ITEMS: {
+      return action.items;
+    }
+    default: {
+      return state;
+    }
+  }
 };
 
 export default itemReducer;

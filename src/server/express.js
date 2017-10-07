@@ -7,5 +7,5 @@ const sourceDir  = 'dist/public';
 app.use(express.static(sourceDir));
 
 app.listen(portNumber, () => {
-  console.log(chalk`{green.bold Express web server started @ http://localhost:${portNumber}} {grey (/${sourceDir}/)}`);
+  console.log(chalk`{green.bold Server started:} {white http://localhost:${portNumber}} {grey (/${sourceDir}/)}`);
 });

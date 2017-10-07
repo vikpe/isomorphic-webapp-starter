@@ -1,5 +1,5 @@
 import React from 'react';
-import '!style-loader!css-loader!sass-loader!../assets/scss/App.scss';
+import '!style-loader!css-loader!sass-loader!../assets/scss/app.scss';
 import reactLogo from '../assets/img/react_logo.svg';
 import TodoListContainer from './../containers/TodoListContainer';
 

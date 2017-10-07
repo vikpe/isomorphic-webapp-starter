@@ -1,0 +1,10 @@
+@import "variables";
+
+.app-todo-list-item,
+.app-todo-list {
+  border: 2px solid $app-color-gray;
+}
+
+.app-todo-list-item {
+  padding: 1em;
+}

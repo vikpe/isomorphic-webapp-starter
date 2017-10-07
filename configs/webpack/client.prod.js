@@ -9,7 +9,7 @@ module.exports = merge(commonClientConfig, {
   entry: './client/index.prod.jsx',
   devtool: 'source-map',
   plugins: [
-    new MinifyPlugin(),
+    new MinifyPlugin({}, {comments: false}),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production'),

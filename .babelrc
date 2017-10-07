@@ -7,6 +7,9 @@
     "react-hot-loader/babel" // Enables React code to work with HMR.
   ],
   "env": {
+    "production": {
+      "presets": ["minify"]
+    },
     "test": {
       "plugins": [
         "transform-object-rest-spread",

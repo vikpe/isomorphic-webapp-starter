@@ -1,6 +1,7 @@
 // client production config
-const merge   = require('webpack-merge');
-const webpack = require('webpack');
+const webpack      = require('webpack');
+const merge        = require('webpack-merge');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 const commonClientConfig = require('./client.common');
 
@@ -8,12 +9,11 @@ module.exports = merge(commonClientConfig, {
   entry: './client/index.prod.jsx',
   devtool: 'source-map',
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-      debug: false,
-      minimize: true,
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
+    new MinifyPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production'),
+      },
     }),
   ],
 });

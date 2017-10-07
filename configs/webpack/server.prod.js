@@ -1,6 +1,7 @@
 // server production config
-const {resolve} = require('path');
-const webpack   = require('webpack');
+const {resolve}    = require('path');
+const webpack      = require('webpack');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = {
   target: 'node',
@@ -20,13 +21,11 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-      debug: false,
-      minimize: true,
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      ecma: 6,
-      sourceMap: true,
+    new MinifyPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production'),
+      },
     }),
   ],
 };

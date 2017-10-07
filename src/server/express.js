@@ -12,9 +12,16 @@ const config = {
 const app = express();
 app.use((request, response, next) => {
   response.header('Access-Control-Allow-Origin', 'http://localhost:8080');
-  response.header('Access-Control-Allow-Headers', 'X-Requested-With');
+  response.header('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type');
   response.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS');
-  next();
+
+  // intercept OPTIONS method
+  if ('OPTIONS' === request.method) {
+    response.send(204);
+  }
+  else {
+    next();
+  }
 });
 app.use(express.static(config.publicDir)); // serve static content
 app.use(bodyParser.json()); // Parse incoming request bodies as JSON (available under request.body)

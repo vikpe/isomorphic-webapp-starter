@@ -1,16 +1,28 @@
 # Isomorphic Webapp Starter
-Isomorphic web application starter with hot module replacement (HMR) for rapid development.
+Isomorphic web application starter running on [node](https://nodejs.org/). 
 
-* **[React](https://facebook.github.io/react/)** (16.x)
-* **[Redux](http://redux.js.org/)**
-* **[Webpack](https://webpack.js.org/)** (3.x)
-* **[Hot Module Replacement (HMR)](https://webpack.js.org/guides/hmr-react/)** using [React Hot Loader](https://github.com/gaearon/react-hot-loader) (3.x)
-* **[Babel](http://babeljs.io/)** (6.x)
-* **[Express](https://expressjs.com/)**
+## Stack (MERN-ish)
+The client consumes data from the server via a REST API.
+
+**Client (frontend)**
+
+* [React](https://facebook.github.io/react/)
+* [Redux](http://redux.js.org/)
+
+**Server (backend)**
+
+* [MongoDB](https://www.mongodb.com/) + [Mongoose](http://mongoosejs.com/)
+* [Express](https://expressjs.com/) (web server)
+
+## Development features
+* [ES6](https://github.com/lukehoban/es6features) support for both client and server.
+* [Webpack](https://webpack.js.org/)
+* [Hot Module Replacement (HMR)](https://webpack.js.org/guides/hmr-react/)
+* [Babel](http://babeljs.io/)
 * [SASS](http://sass-lang.com/)
-* Image loading/minification using [Image Webpack Loader](https://github.com/tcoopman/image-webpack-loader)
-* Code quality (linting) for JavaScript and SASS/CSS.
-* Production build script
+* Image loading/minification.
+* Code quality (linting).
+* Production build script.
 
 ## Definitions
 * **Client** - Frontend part (React, Redux)

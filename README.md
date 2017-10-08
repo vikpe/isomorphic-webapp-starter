@@ -39,14 +39,14 @@ The client consumes data from the server via a REST API.
 ## Usage
 **Prerequisite** - Make sure that MongoDB is running (`mongod`).
 
-###Development
+### Development
 
 `npm run start-dev`
 
 * Builds client continously (HMR enabled) served @ `http://localhost:8080` 
 * Restarts server continously (nodemon enabled) served @ `http://localhost:3000` 
 
-###Production
+### Production
 
 `npm run start-prod`
 
@@ -56,7 +56,7 @@ The client consumes data from the server via a REST API.
 
 ---
 
-###All commands / scripts
+### All commands / scripts
 
 Command | Description
 --- | ---

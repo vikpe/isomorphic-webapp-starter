@@ -50,7 +50,7 @@ Command | Description
 `npm run start-server-dev` | Restart server continously (nodemon enabled) serve @ `http://localhost:3000`
 `npm run start-server-prod` | Start server once (nodemon disabled) serve @ `http://localhost:3000`
 `npm run build` | Build app (client + server) 
-`npm run build-client` | Build client (`/dist/public/client.min.js`) 
+`npm run build-client` | Build client (`/dist/public/js/client.[hash].min.js`) 
 `npm run build-server` | Build server (`/dist/server.min.js`) 
 `npm run lint` | Run JavaScript and SASS linter
 `npm run lint:js` | Run JavaScript linter

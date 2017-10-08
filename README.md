@@ -1,5 +1,5 @@
 # Isomorphic Webapp Starter
-Isomorphic web application starter running on [node](https://nodejs.org/). 
+Isomorphic web application starter running on [Node](https://nodejs.org/).
 
 ## Stack (MERN-ish)
 The client consumes data from the server via a REST API.
@@ -11,10 +11,11 @@ The client consumes data from the server via a REST API.
 
 **Server (backend)**
 
-* [MongoDB](https://www.mongodb.com/) + [Mongoose](http://mongoosejs.com/)
+* [MongoDB](https://www.mongodb.com/) (object modelling using [Mongoose](http://mongoosejs.com/))
 * [Express](https://expressjs.com/) (web server)
 
 ## Development features
+* Production build script.
 * [ES6](https://github.com/lukehoban/es6features) support for both client and server.
 * [Webpack](https://webpack.js.org/)
 * [Hot Module Replacement (HMR)](https://webpack.js.org/guides/hmr-react/)
@@ -22,7 +23,6 @@ The client consumes data from the server via a REST API.
 * [SASS](http://sass-lang.com/)
 * Image loading/minification.
 * Code quality (linting).
-* Production build script.
 
 ## Definitions
 * **Client** - Frontend part (React, Redux)
@@ -52,7 +52,7 @@ The client consumes data from the server via a REST API.
 
 ---
 
-**All commands**
+**All commands / scripts**
 
 Command | Description
 --- | ---
@@ -68,3 +68,8 @@ Command | Description
 `npm run lint:js` | Run JavaScript linter
 `npm run lint:sass` | Run SASS linter
 `npm run start` | (alias of `npm run start-dev`)
+
+## TODO
+* [ ] Add a testing framework (AVA, Jest, ..)
+* [ ] Add tests
+* [ ] Setup Jenkins, Codeclimate etc

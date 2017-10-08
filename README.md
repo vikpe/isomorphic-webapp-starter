@@ -77,3 +77,7 @@ Command | Description
 * [ ] Add a testing framework (AVA, Jest, ..)
 * [ ] Add tests
 * [ ] Setup Jenkins, Codeclimate etc
+
+## See also
+* [React Webpack Babel Starter](https://github.com/vikpe/react-webpack-babel-starter)
+* [React Webpack Typescript Starter](https://github.com/vikpe/react-webpack-typescript-starter)

@@ -1,11 +1,12 @@
 // shared client config (dev and prod)
-const {resolve}       = require('path');
+const {resolve} = require('path');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   context: resolve(__dirname, '../../src'),
   output: {
-    filename: 'js/client.min.js',
+    filename: 'js/client.[hash].min.js',
     path: resolve(__dirname, '../../dist/public'),
     publicPath: '/' // necessary for HMR to know where to load the hot update chunks
   },
@@ -30,7 +31,8 @@ module.exports = {
           'style-loader',
           'css-loader?modules',
           'postcss-loader',
-          'sass-loader'],
+          'sass-loader',
+        ],
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -43,6 +45,7 @@ module.exports = {
   },
   plugins: [
     new StyleLintPlugin(),
+    new HtmlWebpackPlugin({template: 'client/index.ejs',}),
   ],
   externals: {
     'react': 'React',

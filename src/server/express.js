@@ -17,7 +17,7 @@ app.use((request, response, next) => {
 
   // intercept OPTIONS method
   if ('OPTIONS' === request.method) {
-    response.send(204);
+    response.sendStatus(204);
   }
   else {
     next();

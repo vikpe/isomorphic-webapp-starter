@@ -1,1 +1,1 @@
-web: npm run start-server-dev
+web: bash scripts/update_port_number.sh && npm run start-server-prod

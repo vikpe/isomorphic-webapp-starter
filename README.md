@@ -60,18 +60,21 @@ The client consumes data from the server via a REST API.
 
 Command | Description
 --- | ---
+`npm run build` | Build app (client + server) 
+`npm run build-client` | Build client (`/dist/public/js/client.[hash].min.js`) 
+`npm run build-server` | Build server (`/dist/server.min.js`)
+`npm run clean-dist` | Clean dist (client and server)
+`npm run clean-dist-client` | Clean dist (client)
+`npm run clean-dist-server` | Clean dist (server)
 `npm run start-dev` | (see description above)
 `npm run start-prod` | (see description above)
 `npm run start-client-dev` | Build client continously (HMR enabled) serve @ `http://localhost:3000`
 `npm run start-server-dev` | Restart server continously (nodemon enabled) serve @ `http://localhost:3000`
 `npm run start-server-prod` | Start server once (nodemon disabled) serve @ `http://localhost:3000`
-`npm run build` | Build app (client + server) 
-`npm run build-client` | Build client (`/dist/public/js/client.[hash].min.js`) 
-`npm run build-server` | Build server (`/dist/server.min.js`) 
 `npm run lint` | Run JavaScript and SASS linter
 `npm run lint:js` | Run JavaScript linter
 `npm run lint:sass` | Run SASS linter
-`npm run start` | (alias of `npm run start-dev`)
+`npm run start` | (alias of `npm run start-server-prod`)
 
 ## TODO
 * [ ] Add a testing framework (AVA, Jest, ..)

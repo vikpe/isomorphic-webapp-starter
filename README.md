@@ -77,6 +77,19 @@ Command | Description
 `npm run lint:sass` | Run SASS linter
 `npm run start` | (alias of `npm run start-server-prod`)
 
+## Deployment
+**Prerequisites**
+
+Make sure that Node and MongoDB are installed and running.
+
+### General
+1. Build app: `npm run build`
+2. Copy / deploy `/dist/` to a folder on your server.
+3. Run app: `npm run start-server-prod`
+
+### Heroku
+For deployment on [Heroku](https://www.heroku.com/), see the [`deploy-heroku`](https://github.com/vikpe/isomorphic-webapp-starter/tree/deploy-heroku) branch.
+
 ## TODO
 * [ ] Add a testing framework (AVA, Jest, ..)
 * [ ] Add tests

@@ -1,6 +1,18 @@
 # Isomorphic Webapp Starter
 > Isomorphic web application starter running on [Node](https://nodejs.org/).
 
+* [Stack (MERN-ish)](#stack-mern-ish)
+* [Development features](#development-features)
+* [Definitions](#definitions)
+* [Installation](#installation)
+* [Usage](#usage)
+  * [Development](#development)
+  * [Production](#production)
+  * [All commands / scripts](#all-commands--scripts)
+* [Deployment](#deployment)
+  * [General](#general)
+  * [Heroku](#heroku)
+
 ## Stack (MERN-ish)
 The client consumes data from the server via a REST API.
 

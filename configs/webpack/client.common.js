@@ -1,5 +1,6 @@
 // shared client config (dev and prod)
 require('dotenv').config();
+const webpack = require('webpack');
 const {resolve} = require('path');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');

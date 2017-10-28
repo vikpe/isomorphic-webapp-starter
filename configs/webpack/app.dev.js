@@ -1,5 +1,5 @@
 // app development config
-const merge   = require('webpack-merge');
+const merge = require('webpack-merge');
 const webpack = require('webpack');
 
 const commonClientConfig = require('./client.common');

@@ -1,7 +1,7 @@
 // server production config
-const {resolve}    = require('path');
-const webpack      = require('webpack');
 require('dotenv').config();
+const webpack = require('webpack');
+const {resolve} = require('path');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = {
@@ -26,7 +26,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new MinifyPlugin({}, {comments: false}),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
@@ -35,5 +34,6 @@ module.exports = {
         PORT: JSON.stringify(process.env.PORT),
       },
     }),
+    new MinifyPlugin({}, {comments: false}),
   ],
 };

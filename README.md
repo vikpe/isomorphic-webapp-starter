@@ -68,7 +68,7 @@ Command | Description
 `npm run clean-dist-server` | Clean dist server files (`/dist/server.min.js`)
 `npm run start-dev` | (see description above)
 `npm run start-prod` | (see description above)
-`npm run start-client-dev` | Build client continously (HMR enabled) serve @ `http://localhost:3000`
+`npm run start-client-dev` | Build client continously (HMR enabled) serve @ `http://localhost:8080`
 `npm run start-server-dev` | Restart server continously (nodemon enabled) serve @ `http://localhost:3000`
 `npm run start-server-prod` | Start server once (nodemon disabled) serve @ `http://localhost:3000`
 `npm run lint` | Run JavaScript and SASS linter

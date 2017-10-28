@@ -1,86 +1,55 @@
-# Isomorphic Webapp Starter
-Isomorphic web application starter running on [Node](https://nodejs.org/).
+# Isomorphic Webapp Starter (Heroku version)
+> Isomorphic web application starter running on [Node](https://nodejs.org/), setup for deployment to Heroku.
 
-## Stack (MERN-ish)
-The client consumes data from the server via a REST API.
+**Note**
 
-**Client (frontend)**
+* This branch covers details specific for deployment to Heroku.
+* Please see the [`master branch`](https://github.com/vikpe/isomorphic-webapp-starter) for usage during development.
 
-* [React](https://facebook.github.io/react/)
-* [Redux](http://redux.js.org/)
-
-**Server (backend)**
-
-* [MongoDB](https://www.mongodb.com/) (object modelling using [Mongoose](http://mongoosejs.com/))
-* [Express](https://expressjs.com/) (web server)
-
-## Development features
-* Production build script (minify and hash builds).
-* [ES6](https://github.com/lukehoban/es6features) support for both client and server.
-* [Webpack](https://webpack.js.org/)
-* [Hot Module Replacement (HMR)](https://webpack.js.org/guides/hmr-react/) - Instantly inject client-side changes to browser
-* [nodemon](https://nodemon.io/) - Automatically restart server on server-side changes
-* [Babel](http://babeljs.io/)
-* [SASS](http://sass-lang.com/)
-* Image loading.
-* Code quality (linting).
-
-## Definitions
-* **Client** - Frontend part (React, Redux)
-* **Server** - Backend part (Express, MongoDB)
-* **App** - Client + Server
-* **HMR** - [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/)
+## Demo
+* [Isomorphic Webapp Starter](https://isomorphic-webapp-starter.herokuapp.com/) on Heroku
 
 ## Installation
+
+### 1. Local installation
 1. Clone/download repo
-2. `npm install`
-3. [Download and install MongoDB (Community Server)](https://www.mongodb.com/download-center#community).
+1. Checkout the `deploy-heroku` branch.
+1. `npm install`
+1. [Download and install MongoDB (Community Server)](https://www.mongodb.com/download-center#community).
 
-## Usage
-**Prerequisite** - Make sure that MongoDB is running (`mongod`).
+### 2. Setup app on Heroku
+1. Create a new app
+1. Navigate to `Resource`
+1. Under `Add-ons`, attach `mLab MongoDB` to your app.
+1. Navigate to `Deploy`
+1. Under `Deployment method`, choose `Github` and select your repo (your fork/clone of this repo).
+1. Under `Automatic deploys`, click `Enable Automatic Deploys`.
+1. Navigate to `Settings`
+1. Under `Config Variables`, click `Reveal Config Vars`
+1. Add a config var with the key `APP_URI` with value `[YOUR_APP_URI]` (for example `https://isomorphic-webapp-starter.herokuapp.com`).
+   
+   **Tip**: Copy the URI from the `Open App` button in the top right corner.
 
-### Development
+Now, whenever you push changes to the branch selected under "Automatic Deploys" (default is `master`), Heroku will automaticlly build and deploy your app. You can see the build progress live on the `Activity` page.
 
-`npm run start-dev`
+## Differences from the `master` branch
 
-* Builds client continously (HMR enabled) served @ `http://localhost:8080` 
-* Restarts server continously (nodemon enabled) served @ `http://localhost:3000` 
+### Contains a `Procfile`
+Required on Heroku in order to determine what kind of process to run and defines the start command.
 
-### Production
+```
+web: bash scripts/update_port_number.sh $PORT && npm run start-server-prod
+```
 
-`npm run start-prod`
+### Contains script: `scripts/update_port_number.sh`
+This scripts is run from the `Procfile` and updates the port number used by Express whis is set in `server.min.js`.
 
-* Builds client once (HMR disabled)
-* Builds server once (nodemon disabled)
-* App served @ `http://localhost:3000`
+```
+sed -i "s/___EXPRESS_PORT_NUMBER___/$1/g" dist/server.min.js
+```
 
----
+**Why is this required?**
 
-### All commands / scripts
+Because the app is built to a bundle _before_ a **random port number** (`$PORT`) is assigned to the dyno that will run the app.
 
-Command | Description
---- | ---
-`npm run build` | Build app (client + server) 
-`npm run build-client` | Build client (`/dist/public/js/client.[hash].min.js`) 
-`npm run build-server` | Build server (`/dist/server.min.js`)
-`npm run clean-dist` | Clean dist, all files (client and server)
-`npm run clean-dist-client` | Clean dist client files (`/dist/public/*`)
-`npm run clean-dist-server` | Clean dist server files (`/dist/server.min.js`)
-`npm run start-dev` | (see description above)
-`npm run start-prod` | (see description above)
-`npm run start-client-dev` | Build client continously (HMR enabled) serve @ `http://localhost:8080`
-`npm run start-server-dev` | Restart server continously (nodemon enabled) serve @ `http://localhost:3000`
-`npm run start-server-prod` | Start server once (nodemon disabled) serve @ `http://localhost:3000`
-`npm run lint` | Run JavaScript and SASS linter
-`npm run lint:js` | Run JavaScript linter
-`npm run lint:sass` | Run SASS linter
-`npm run start` | (alias of `npm run start-server-prod`)
-
-## TODO
-* [ ] Add a testing framework (AVA, Jest, ..)
-* [ ] Add tests
-* [ ] Setup Jenkins, Codeclimate etc
-
-## See also
-* [React Webpack Babel Starter](https://github.com/vikpe/react-webpack-babel-starter)
-* [React Webpack Typescript Starter](https://github.com/vikpe/react-webpack-typescript-starter)
+Therefore we need to replace the placeholder string `___EXPRESS_PORT_NUMBER___` in `server.min.js` with the assigned random port number.

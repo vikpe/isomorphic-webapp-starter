@@ -1,4 +1,4 @@
 import database from './database';
-import './express';
+import webserver from './webserver';
 
-database.connect();
+database.connect(() => webserver.start());

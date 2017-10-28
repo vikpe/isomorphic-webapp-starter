@@ -14,4 +14,8 @@ ApiRouter
     .put(ItemController.update)
     .delete(ItemController.delete);
 
-export default ApiRouter;
+const routes = {
+  api: ApiRouter,
+};
+
+export default routes;

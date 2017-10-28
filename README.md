@@ -13,22 +13,20 @@
 
 ### 1. Local installation
 1. Clone/download repo
-1. Checkout the `deploy-heroku` branch.
-1. `npm install`
-1. [Download and install MongoDB (Community Server)](https://www.mongodb.com/download-center#community).
+2. Checkout the `deploy-heroku` branch.
+3. `npm install`
+4. [Download and install MongoDB (Community Server)](https://www.mongodb.com/download-center#community).
 
 ### 2. Setup app on Heroku
 1. Create a new app
-1. Navigate to `Resource`
-1. Under `Add-ons`, attach `mLab MongoDB` to your app.
-1. Navigate to `Deploy`
-1. Under `Deployment method`, choose `Github` and select your repo (your fork/clone of this repo).
-1. Under `Automatic deploys`, click `Enable Automatic Deploys`.
-1. Navigate to `Settings`
-1. Under `Config Variables`, click `Reveal Config Vars`
-1. Add a config var with the key `APP_URI` with value `[YOUR_APP_URI]` (for example `https://isomorphic-webapp-starter.herokuapp.com`).
-   
-   **Tip**: Copy the URI from the `Open App` button in the top right corner.
+1. Navigate to `Resources`
+  * Under `Add-ons`, attach `mLab MongoDB` to your app (a free MongoDB service).
+3. Navigate to `Deploy`
+  * Under `Deployment method`, choose `Github` and select your repo (your fork/clone of this repo).
+  * Under `Automatic deploys`, click `Enable Automatic Deploys`.
+4. Navigate to `Settings`
+  * Under `Config Variables`, click `Reveal Config Vars`
+  * Add a config var with the key `APP_URI` with value `[YOUR_APP_URI]` (for example `https://isomorphic-webapp-starter.herokuapp.com`).
 
 Now, whenever you push changes to the branch selected under "Automatic Deploys" (default is `master`), Heroku will automaticlly build and deploy your app. You can see the build progress live on the `Activity` page.
 

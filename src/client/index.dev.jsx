@@ -14,7 +14,7 @@ const renderComponent = (Component) => {
           <Component/>
         </Provider>
       </AppContainer>,
-      rootEl,
+      rootEl
   );
 };
 

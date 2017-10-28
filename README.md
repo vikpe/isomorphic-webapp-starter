@@ -64,8 +64,8 @@ Command | Description
 `npm run build-client` | Build client (`/dist/public/js/client.[hash].min.js`) 
 `npm run build-server` | Build server (`/dist/server.min.js`)
 `npm run clean-dist` | Clean dist (client and server)
-`npm run clean-dist-client` | Clean dist (client)
-`npm run clean-dist-server` | Clean dist (server)
+`npm run clean-dist-client` | Clean client dist (`/dist/public/*`)
+`npm run clean-dist-server` | Clean server dist (`/dist/server.min.js`)
 `npm run start-dev` | (see description above)
 `npm run start-prod` | (see description above)
 `npm run start-client-dev` | Build client continously (HMR enabled) serve @ `http://localhost:3000`

@@ -1,5 +1,5 @@
 # Isomorphic Webapp Starter
-Isomorphic web application starter running on [Node](https://nodejs.org/).
+> Isomorphic web application starter running on [Node](https://nodejs.org/).
 
 ## Stack (MERN-ish)
 The client consumes data from the server via a REST API.
@@ -88,7 +88,10 @@ Make sure that Node and MongoDB are installed and running.
 3. Run app: `npm run start-server-prod`
 
 ### Heroku
-For deployment on [Heroku](https://www.heroku.com/), see the [`deploy-heroku`](https://github.com/vikpe/isomorphic-webapp-starter/tree/deploy-heroku) branch.
+This starter can easily be deployed on [Heroku](https://www.heroku.com/).
+
+* **Demo**: [Isomorphic Webapp Starter on Heroku](https://isomorphic-webapp-starter.herokuapp.com/)
+* **Code**: See the [`deploy-heroku`](https://github.com/vikpe/isomorphic-webapp-starter/tree/deploy-heroku) branch.
 
 ## TODO
 * [ ] Add a testing framework (AVA, Jest, ..)

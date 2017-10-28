@@ -1,4 +1,5 @@
 // shared client config (dev and prod)
+require('dotenv').config();
 const {resolve} = require('path');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -46,6 +47,11 @@ module.exports = {
   plugins: [
     new StyleLintPlugin(),
     new HtmlWebpackPlugin({template: 'client/index.ejs',}),
+    new webpack.DefinePlugin({
+      'process.env': {
+        APP_URI: JSON.stringify(process.env.APP_URI),
+      },
+    }),
   ],
   externals: {
     'react': 'React',

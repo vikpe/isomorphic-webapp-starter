@@ -1,5 +1,5 @@
 .idea/
-coverage/
 dist/
 node_modules/
+tests/__coverage__/
 .env

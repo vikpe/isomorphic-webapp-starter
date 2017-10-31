@@ -15,8 +15,8 @@
     "start-client-dev": "webpack-dev-server --config configs/webpack/app.dev",
     "start-server-dev": "nodemon -q --watch src/server src/server/index.js --exec babel-node --presets env",
     "start-server-prod": "node dist/server.min.js",
-    "test": "jest --coverage",
-    "test-watch": "jest --coverage --watch",
+    "test": "jest --coverage --config=configs/jest.json",
+    "test-watch": "jest --coverage --watch --config=configs/jest.json",
     "lint": "npm run lint-js && npm run lint-sass",
     "lint-js": "eslint src/**/*.js*",
     "lint-sass": "stylelint ./src/client/**/*.scss"
@@ -78,19 +78,6 @@
   },
   "devDependencies": {
     "jest": "^21.2.1"
-  },
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/tests/__mocks__/polyfills.js"
-    ],
-    "roots": [
-      "<rootDir>/src/",
-      "<rootDir>/tests/"
-    ],
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tests/__mocks__/fileMock.js",
-      "\\.(css|scss|less)$": "<rootDir>/tests/__mocks__/styleMock.js"
-    }
   },
   "eslintConfig": {
     "env": {

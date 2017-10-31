@@ -47,7 +47,7 @@ module.exports = {
   },
   plugins: [
     new StyleLintPlugin(),
-    new HtmlWebpackPlugin({template: 'client/index.ejs',}),
+    new HtmlWebpackPlugin({template: 'client/index.html.ejs',}),
     new webpack.DefinePlugin({
       'process.env': {
         APP_URI: JSON.stringify(process.env.APP_URI),

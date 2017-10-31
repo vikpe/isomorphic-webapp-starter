@@ -1,9 +1,13 @@
 # Isomorphic Webapp Starter [![Build Status](https://travis-ci.org/vikpe/isomorphic-webapp-starter.svg?branch=master)](https://travis-ci.org/vikpe/isomorphic-webapp-starter)
 > Isomorphic web application starter running on [Node](https://nodejs.org/).
 
-* [Stack (MERN-ish)](#stack-mern-ish)
-* [Development features](#development-features)
-* [Definitions](#definitions)
+* **Client** (frontend): [React](https://facebook.github.io/react/) + [Redux](http://redux.js.org/)
+* **Server** (backend): [Express](https://expressjs.com/) (web server) + [MongoDB](https://www.mongodb.com/) (object modelling using [Mongoose](http://mongoosejs.com/))
+
+The client consumes data from the server via a REST API.
+
+## Contents
+* [Features](#features)
 * [Installation](#installation)
 * [Usage](#usage)
   * [Development](#development)
@@ -13,34 +17,15 @@
   * [General](#general)
   * [Heroku](#heroku)
 
-## Stack (MERN-ish)
-The client consumes data from the server via a REST API.
-
-**Client (frontend)**
-
-* [React](https://facebook.github.io/react/)
-* [Redux](http://redux.js.org/)
-
-**Server (backend)**
-
-* [MongoDB](https://www.mongodb.com/) (object modelling using [Mongoose](http://mongoosejs.com/))
-* [Express](https://expressjs.com/) (web server)
-
-## Development features
-* Production build script (minify and hash builds) // [Webpack](https://webpack.js.org/).
-* [ES6](https://github.com/lukehoban/es6features) support for client and server side code // [Babel](http://babeljs.io/).
-* [Hot Module Replacement (HMR)](https://webpack.js.org/guides/hmr-react/) - Instantly inject client-side changes to browser
+## Features
+* Automatically inject client-side changes to browser // [Hot Module Replacement (HMR)](https://webpack.js.org/guides/hmr-react/) 
 * Automatically restart server on server-side changes // [nodemon](https://nodemon.io/) 
+* Automatically run tests on code changes (+ display code coverage) // [Jest](https://github.com/facebook/jest)
+* Client _and_ server side ES6 support // [Babel](http://babeljs.io/).
+* Production build script (minify and hash builds) // [Webpack](https://webpack.js.org/).
 * [SASS](http://sass-lang.com/)
-* Automatically run tests on code changes + code coverage // [Jest](https://github.com/facebook/jest)
 * Image loading / minification
 * Code quality (linting).
-
-## Definitions
-* **Client** - Frontend part (React, Redux)
-* **Server** - Backend part (Express, MongoDB)
-* **App** - Client + Server
-* **HMR** - [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/)
 
 ## Installation
 1. Clone/download repo

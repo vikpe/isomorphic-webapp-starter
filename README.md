@@ -107,11 +107,6 @@ This starter can easily be deployed on [Heroku](https://www.heroku.com/).
 * **Demo**: [Isomorphic Webapp Starter on Heroku](https://isomorphic-webapp-starter.herokuapp.com/)
 * **Code**: See the [`deploy-heroku`](https://github.com/vikpe/isomorphic-webapp-starter/tree/deploy-heroku) branch.
 
-## TODO
-* [ ] Add a testing framework (AVA, Jest, ..)
-* [ ] Add tests
-* [ ] Setup Jenkins, Codeclimate etc
-
 ## See also
 * [React Webpack Babel Starter](https://github.com/vikpe/react-webpack-babel-starter)
 * [React Webpack Typescript Starter](https://github.com/vikpe/react-webpack-typescript-starter)

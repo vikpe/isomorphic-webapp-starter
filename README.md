@@ -84,9 +84,11 @@ Command | Description
 `npm run start-client-dev` | Build client continously (HMR enabled) serve @ `http://localhost:8080`
 `npm run start-server-dev` | Restart server continously (nodemon enabled) serve @ `http://localhost:3000`
 `npm run start-server-prod` | Start server once (nodemon disabled) serve @ `http://localhost:3000`
+`npm run test` | Run tests (once)
+`npm run test-watch-coverage` | Run tests (continously, on file change)
 `npm run lint` | Run JavaScript and SASS linter
-`npm run lint:js` | Run JavaScript linter
-`npm run lint:sass` | Run SASS linter
+`npm run lint-js` | Run JavaScript linter
+`npm run lint-sass` | Run SASS linter
 `npm run start` | (alias of `npm run start-server-prod`)
 
 ## Deployment

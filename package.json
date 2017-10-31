@@ -15,7 +15,7 @@
     "start-client-dev": "webpack-dev-server --config configs/webpack/app.dev",
     "start-server-dev": "nodemon -q --watch src/server src/server/index.js --exec babel-node --presets env",
     "start-server-prod": "node dist/server.min.js",
-    "test": "jest",
+    "test": "jest --coverage",
     "test-watch-coverage": "jest --watch --coverage",
     "lint": "npm run lint-js && npm run lint-sass",
     "lint-js": "eslint src/**/*.js*",

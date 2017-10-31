@@ -16,7 +16,7 @@
     "start-server-dev": "nodemon -q --watch src/server src/server/index.js --exec babel-node --presets env",
     "start-server-prod": "node dist/server.min.js",
     "test": "jest --coverage",
-    "test-watch-coverage": "jest --watch --coverage",
+    "test-watch": "jest --coverage --watch",
     "lint": "npm run lint-js && npm run lint-sass",
     "lint-js": "eslint src/**/*.js*",
     "lint-sass": "stylelint ./src/client/**/*.scss"

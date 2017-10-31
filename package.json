@@ -15,6 +15,7 @@
     "start-client-dev": "webpack-dev-server --config configs/webpack/app.dev",
     "start-server-dev": "nodemon -q --watch src --ignore src/client src/server/index.js --exec babel-node",
     "start-server-prod": "node dist/server.min.js",
+    "test": "jest",
     "lint": "npm run lint:js && npm run lint:sass",
     "lint:js": "eslint src/**/*.js*",
     "lint:sass": "stylelint ./src/client/**/*.scss"
@@ -74,7 +75,9 @@
     "webpack-dev-server": "^2.9.3",
     "webpack-merge": "^4.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
   "eslintConfig": {
     "env": {
       "node": true

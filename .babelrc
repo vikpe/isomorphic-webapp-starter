@@ -4,17 +4,16 @@
     "react" // Transpile React components to JavaScript
   ],
   "plugins": [
-    "react-hot-loader/babel" // Enables React code to work with HMR.
+    "react-hot-loader/babel", // Enables React code to work with HMR.
+    "transform-object-rest-spread",
+    "transform-es2015-modules-commonjs"
   ],
   "env": {
     "production": {
       "presets": ["minify"]
     },
     "test": {
-      "plugins": [
-        "transform-object-rest-spread",
-        "transform-es2015-modules-commonjs"
-      ]
+      "presets": ["env", "react"]
     }
   }
 }

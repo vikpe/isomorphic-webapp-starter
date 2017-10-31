@@ -79,9 +79,16 @@
     "jest": "^21.2.1"
   },
   "jest": {
+    "setupFiles": [
+      "<rootDir>/tests/__mocks__/polyfills.js"
+    ],
+    "roots": [
+      "<rootDir>/src/",
+      "<rootDir>/tests/"
+    ],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__tests__/__mocks__/fileMock.js",
-      "\\.(css|scss|less)$": "<rootDir>/__tests__/__mocks__/styleMock.js"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tests/__mocks__/fileMock.js",
+      "\\.(css|scss|less)$": "<rootDir>/tests/__mocks__/styleMock.js"
     }
   },
   "eslintConfig": {

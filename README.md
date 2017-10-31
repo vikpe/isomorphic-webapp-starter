@@ -27,14 +27,13 @@ The client consumes data from the server via a REST API.
 * [Express](https://expressjs.com/) (web server)
 
 ## Development features
-* Production build script (minify and hash builds).
-* [ES6](https://github.com/lukehoban/es6features) support for both client and server.
-* [Webpack](https://webpack.js.org/)
+* Production build script (minify and hash builds) // [Webpack](https://webpack.js.org/).
+* [ES6](https://github.com/lukehoban/es6features) support for client and server side code // [Babel](http://babeljs.io/).
 * [Hot Module Replacement (HMR)](https://webpack.js.org/guides/hmr-react/) - Instantly inject client-side changes to browser
-* [nodemon](https://nodemon.io/) - Automatically restart server on server-side changes
-* [Babel](http://babeljs.io/)
+* Automatically restart server on server-side changes // [nodemon](https://nodemon.io/) 
 * [SASS](http://sass-lang.com/)
-* Image loading.
+* Automatically run tests on code changes + code coverage // [Jest](https://github.com/facebook/jest)
+* Image loading / minification
 * Code quality (linting).
 
 ## Definitions

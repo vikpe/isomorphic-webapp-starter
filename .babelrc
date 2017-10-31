@@ -11,6 +11,7 @@
       "presets": ["minify"]
     },
     "test": {
+      "presets": ["env", "react"],
       "plugins": [
         "transform-object-rest-spread",
         "transform-es2015-modules-commonjs"

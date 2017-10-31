@@ -1,22 +1,23 @@
-import React from 'react';
 import '!style-loader!css-loader!sass-loader!../assets/scss/app.scss';
-import reactLogo from '../assets/img/react_logo.svg';
-import TodoListContainer from './../containers/TodoListContainer';
-import Helmet from 'react-helmet';
+import React from 'react';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import StartPage from './StartPage';
+import AboutPage from './AboutPage';
 
 class App extends React.PureComponent {
   render() {
     return (
-        <div className="app">
-          <Helmet>
-            <title>Isomorphic Webapp Starter</title>
-          </Helmet>
-          <img src={reactLogo} height="120"/>
-          <h1>Isomorphic Webapp Starter</h1>
-          <p>Isomorphic web application starter with hot module replacement (HMR) for rapid development.</p>
-          <hr/>
-          <TodoListContainer/>
-        </div>
+        <Router>
+          <div className="app">
+            <Link to="/">Home</Link>
+            &nbsp;- <Link to="/about">About</Link>
+            <hr/>
+
+            <Route exact path="/" component={StartPage}/>
+            <Route exact path="/about" component={AboutPage}/>
+
+          </div>
+        </Router>
     );
   }
 }

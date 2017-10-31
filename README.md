@@ -1,4 +1,4 @@
-# Isomorphic Webapp Starter
+# Isomorphic Webapp Starter [![Build Status](https://travis-ci.org/vikpe/isomorphic-webapp-starter.svg?branch=master)](https://travis-ci.org/vikpe/isomorphic-webapp-starter)
 > Isomorphic web application starter running on [Node](https://nodejs.org/).
 
 * [Stack (MERN-ish)](#stack-mern-ish)

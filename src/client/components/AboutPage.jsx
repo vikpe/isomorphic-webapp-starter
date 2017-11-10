@@ -1,5 +1,4 @@
 import React from 'react';
-import '!style-loader!css-loader!sass-loader!../assets/scss/app.scss';
 import Helmet from 'react-helmet';
 
 class AboutPage extends React.PureComponent {

@@ -97,5 +97,6 @@
   },
   "stylelint": {
     "extends": "stylelint-config-standard"
-  }
+  },
+  "postcss": {}
 }

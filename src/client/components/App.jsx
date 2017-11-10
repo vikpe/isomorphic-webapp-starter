@@ -1,4 +1,4 @@
-import '!style-loader!css-loader!sass-loader!../assets/scss/app.scss';
+import '../assets/scss/app.scss';
 import React from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import StartPage from './StartPage';

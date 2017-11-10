@@ -17,7 +17,7 @@ renderComponent(Root);
 
 // Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./components/App', () => {
+  module.hot.accept('./components/Root', () => {
     renderComponent(Root);
   });
 }

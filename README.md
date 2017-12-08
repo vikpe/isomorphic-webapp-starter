@@ -23,9 +23,9 @@ The client consumes data from the server via a REST API.
 * Automatically run tests on code changes (+ display code coverage) // [Jest](https://github.com/facebook/jest)
 * Client _and_ server side ES6 support // [Babel](http://babeljs.io/).
 * Production build script (minify and hash builds) // [Webpack](https://webpack.js.org/).
+* Code quality (linting) // [Prettier](https://github.com/prettier/prettier)
 * [SASS](http://sass-lang.com/)
 * Image loading / minification
-* Code quality (linting).
 
 ## Installation
 1. Clone/download repo

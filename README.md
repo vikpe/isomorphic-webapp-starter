@@ -70,9 +70,7 @@ Command | Description
 `npm run start-server-prod` | Start server once (nodemon disabled) serve @ `http://localhost:3000`
 `npm run test` | Run tests (once)
 `npm run test-watch` | Run tests (continously), on source or test file changes.
-`npm run lint` | Run JavaScript and SASS linter
-`npm run lint-js` | Run JavaScript linter
-`npm run lint-sass` | Run SASS linter
+`npm run lint` | Run prettier - JavaScript and SASS linter
 `npm run start` | (alias of `npm run start-server-prod`)
 
 ## Deployment

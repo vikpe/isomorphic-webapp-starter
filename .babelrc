@@ -4,7 +4,17 @@
     "react" // Transpile React components to JavaScript
   ],
   "plugins": [
-    "react-hot-loader/babel" // Enables React code to work with HMR.
+    "react-hot-loader/babel", // Enables React code to work with HMR.
+    [
+      "module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "client": "./src/client",
+        "server": "./src/server",
+        "tests": "./tests"
+      }
+    }
+    ]
   ],
   "env": {
     "production": {

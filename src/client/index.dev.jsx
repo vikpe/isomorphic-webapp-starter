@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import Root from './components/Root';
-import store from './store';
+import Root from 'client/components/Root';
+import store from 'client/store';
 
 const renderComponent = Component => {
   ReactDOM.render(

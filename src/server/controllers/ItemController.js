@@ -1,4 +1,4 @@
-import Item from '../models/Item';
+import Item from 'server/models/Item';
 
 const ItemController = {
   index: (request, response) => {

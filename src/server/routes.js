@@ -1,5 +1,5 @@
 import express from 'express';
-import ItemController from './controllers/ItemController';
+import ItemController from 'server/controllers/ItemController';
 
 const ApiRouter = express.Router();
 

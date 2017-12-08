@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import ItemSchema from './schema/ItemSchema';
+import ItemSchema from 'server/models/schema/ItemSchema';
 
 const ItemModel = mongoose.model('Item', ItemSchema);
 

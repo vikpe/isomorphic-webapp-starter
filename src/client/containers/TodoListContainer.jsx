@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import TodoList from '../components/TodoList';
+import TodoList from 'client/components/TodoList';
 
-import { createItem, getItems, deleteItem } from '../actions/items';
+import { createItem, getItems, deleteItem } from 'client/actions/items';
 
 class TodoListContainer extends React.Component {
   componentDidMount() {

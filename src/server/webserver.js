@@ -1,7 +1,7 @@
 require('dotenv').config();
 import chalk from 'chalk';
 import express from 'express';
-import { applyMiddleware } from './middleware';
+import { applyMiddleware } from 'server/middleware';
 
 const webserver = {
   start: () => {

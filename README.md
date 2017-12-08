@@ -29,7 +29,7 @@ The client consumes data from the server via a REST API.
 
 ## Installation
 1. Clone/download repo
-2. `npm install`
+2. `npm install` or `yarn install`
 3. [Download and install MongoDB (Community Server)](https://www.mongodb.com/download-center#community).
 4. Rename `.env.example` to `.env` and set properties to match your MongoDB URI and server URI.
 

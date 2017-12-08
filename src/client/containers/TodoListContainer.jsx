@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import TodoList from '../components/TodoList';
 
-import {
-  createItem,
-  getItems,
-  deleteItem,
-} from '../actions/items';
+import { createItem, getItems, deleteItem } from '../actions/items';
 
 class TodoListContainer extends React.Component {
   componentDidMount() {
@@ -15,20 +11,20 @@ class TodoListContainer extends React.Component {
   }
 
   render() {
-    const {
-      dispatch,
-      items,
-    } = this.props;
+    const { dispatch, items } = this.props;
 
-    const onDeleteClick = (id) => dispatch(deleteItem(id));
-    const onCreateClick = () => dispatch(createItem({title: `Item ${1 + items.length}`}));
+    const onDeleteClick = id => dispatch(deleteItem(id));
+    const onCreateClick = () =>
+      dispatch(createItem({ title: `Item ${1 + items.length}` }));
 
     return (
-        <div>
-          <TodoList items={items} onDeleteClick={onDeleteClick}/>
-          <hr/>
-          <a href="#" onClick={onCreateClick}>Add item</a>
-        </div>
+      <div>
+        <TodoList items={items} onDeleteClick={onDeleteClick} />
+        <hr />
+        <a href="#" onClick={onCreateClick}>
+          Add item
+        </a>
+      </div>
     );
   }
 }
@@ -38,7 +34,7 @@ TodoListContainer.propTypes = {
   items: PropTypes.array,
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   items: state.items,
 });
 

@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 
 class TodoListItem extends React.PureComponent {
   render() {
-    const {
-      item,
-      onDeleteClick,
-    } = this.props;
+    const { item, onDeleteClick } = this.props;
 
     return (
-        <div className="app-todo-list-item">
-          {item.title} - <a href="#" onClick={() => onDeleteClick(item._id)}>delete</a>
-        </div>
+      <div className="app-todo-list-item">
+        {item.title} -{' '}
+        <a href="#" onClick={() => onDeleteClick(item._id)}>
+          delete
+        </a>
+      </div>
     );
   }
 }

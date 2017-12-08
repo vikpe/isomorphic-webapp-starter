@@ -17,7 +17,7 @@
     "start-server-prod": "node dist/server.min.js",
     "test": "jest --coverage --config=configs/jest.json",
     "test-watch": "jest --coverage --watch --config=configs/jest.json",
-    "lint": "prettier --write \"{src,tests/client,tests/server}/**/*.{js,jsx,scss}\""
+    "lint": "prettier --write --single-quote --trailing-comma all \"{src,tests/client,tests/server}/**/*.{js,jsx,scss}\""
   },
   "author": "Viktor Persson",
   "license": "MIT",

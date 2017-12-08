@@ -7,5 +7,5 @@ it('renders without crashing', () => {
     title: 'hehe',
   };
   const div = document.createElement('div');
-  ReactDOM.render(<TodoListItem item={item}/>, div);
+  ReactDOM.render(<TodoListItem item={item} />, div);
 });

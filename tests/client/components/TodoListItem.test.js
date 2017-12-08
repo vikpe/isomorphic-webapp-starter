@@ -1,11 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import TodoListItem from "../../../src/client/components/TodoListItem";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import TodoListItem from '../../../src/client/components/TodoListItem';
 
-it("renders without crashing", () => {
+it('renders without crashing', () => {
   const item = {
-    title: "hehe"
+    title: 'hehe',
   };
-  const div = document.createElement("div");
+  const div = document.createElement('div');
   ReactDOM.render(<TodoListItem item={item} />, div);
 });

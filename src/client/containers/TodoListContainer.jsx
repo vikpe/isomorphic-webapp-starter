@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import TodoList from "../components/TodoList";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import TodoList from '../components/TodoList';
 
-import { createItem, getItems, deleteItem } from "../actions/items";
+import { createItem, getItems, deleteItem } from '../actions/items';
 
 class TodoListContainer extends React.Component {
   componentDidMount() {
@@ -31,11 +31,11 @@ class TodoListContainer extends React.Component {
 
 TodoListContainer.propTypes = {
   dispatch: PropTypes.func,
-  items: PropTypes.array
+  items: PropTypes.array,
 };
 
 const mapStateToProps = state => ({
-  items: state.items
+  items: state.items,
 });
 
 export default connect(mapStateToProps)(TodoListContainer);

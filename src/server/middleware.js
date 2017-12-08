@@ -1,34 +1,34 @@
-import express from "express";
-import bodyParser from "body-parser";
-import compression from "compression";
-import routes from "./routes";
+import express from 'express';
+import bodyParser from 'body-parser';
+import compression from 'compression';
+import routes from './routes';
 
 const customMiddleware = {
   allowLocalhostCors: () => (request, response, next) => {
-    response.header("Access-Control-Allow-Origin", "http://localhost:8080");
+    response.header('Access-Control-Allow-Origin', 'http://localhost:8080');
     response.header(
-      "Access-Control-Allow-Headers",
-      "X-Requested-With, Content-Type"
+      'Access-Control-Allow-Headers',
+      'X-Requested-With, Content-Type',
     );
     response.header(
-      "Access-Control-Allow-Methods",
-      "GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS"
+      'Access-Control-Allow-Methods',
+      'GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS',
     );
 
     next();
   },
   handleOptionRequests: () => (request, response, next) => {
-    if ("OPTIONS" === request.method) {
+    if ('OPTIONS' === request.method) {
       response.sendStatus(204);
     } else {
       next();
     }
-  }
+  },
 };
 
 export const applyMiddleware = app => {
   // request related
-  if (process.env.APP_URI.includes("://localhost")) {
+  if (process.env.APP_URI.includes('://localhost')) {
     app.use(customMiddleware.allowLocalhostCors());
   }
 
@@ -39,6 +39,6 @@ export const applyMiddleware = app => {
   app.use(compression()); // compress all responses
 
   // route related
-  app.use("/api", routes.api); // routes for API
-  app.use(express.static("dist/public")); // serve static content
+  app.use('/api', routes.api); // routes for API
+  app.use(express.static('dist/public')); // serve static content
 };

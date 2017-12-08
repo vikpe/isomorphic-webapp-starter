@@ -1,6 +1,6 @@
-require("dotenv").config();
-import chalk from "chalk";
-import mongoose from "mongoose";
+require('dotenv').config();
+import chalk from 'chalk';
+import mongoose from 'mongoose';
 
 mongoose.Promise = global.Promise;
 
@@ -21,7 +21,7 @@ const database = {
     mongoose
       .connect(mongoDbUri, { useMongoClient: true })
       .then(onSuccess, onError);
-  }
+  },
 };
 
 export default database;

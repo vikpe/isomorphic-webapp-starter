@@ -1,14 +1,14 @@
-import ApiClient from "../ApiClient";
-import * as actionTypes from "../actionsTypes";
+import ApiClient from '../ApiClient';
+import * as actionTypes from '../actionsTypes';
 
 const receiveItems = items => ({
   type: actionTypes.RECEIVE_ITEMS,
-  items: items
+  items: items,
 });
 
 export function createItem(item) {
   return dispatch =>
-    ApiClient.post("items", item).then(() => {
+    ApiClient.post('items', item).then(() => {
       dispatch(getItems());
     });
 }
@@ -22,7 +22,7 @@ export function deleteItem(id) {
 
 export function getItems() {
   return dispatch =>
-    ApiClient.get("items").then(response => {
+    ApiClient.get('items').then(response => {
       dispatch(receiveItems(response.data));
     });
 }

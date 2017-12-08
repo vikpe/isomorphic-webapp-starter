@@ -1,7 +1,7 @@
-import React from "react";
-import reactLogo from "../assets/img/react_logo.svg";
-import TodoListContainer from "./../containers/TodoListContainer";
-import Helmet from "react-helmet";
+import React from 'react';
+import reactLogo from '../assets/img/react_logo.svg';
+import TodoListContainer from './../containers/TodoListContainer';
+import Helmet from 'react-helmet';
 
 class StartPage extends React.PureComponent {
   render() {

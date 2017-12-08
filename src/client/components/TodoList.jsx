@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import TodoListItem from "./TodoListItem";
+import React from 'react';
+import PropTypes from 'prop-types';
+import TodoListItem from './TodoListItem';
 
 class TodoList extends React.PureComponent {
   render() {
@@ -18,11 +18,11 @@ class TodoList extends React.PureComponent {
 
 TodoList.propTypes = {
   onDeleteClick: PropTypes.func,
-  items: PropTypes.array
+  items: PropTypes.array,
 };
 
 TodoList.defaultProps = {
-  items: []
+  items: [],
 };
 
 export default TodoList;

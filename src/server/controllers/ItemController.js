@@ -1,4 +1,4 @@
-import Item from "../models/Item";
+import Item from '../models/Item';
 
 const ItemController = {
   index: (request, response) => {
@@ -42,7 +42,7 @@ const ItemController = {
       if (error) {
         response.send(error);
       } else {
-        response.json("OK");
+        response.json('OK');
       }
     });
   },
@@ -54,10 +54,10 @@ const ItemController = {
       if (error) {
         response.send(error);
       } else {
-        response.json("OK");
+        response.json('OK');
       }
     });
-  }
+  },
 };
 
 export default ItemController;

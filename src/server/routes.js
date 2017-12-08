@@ -1,19 +1,19 @@
-import express from "express";
-import ItemController from "./controllers/ItemController";
+import express from 'express';
+import ItemController from './controllers/ItemController';
 
 const ApiRouter = express.Router();
 
-ApiRouter.route("/items")
+ApiRouter.route('/items')
   .get(ItemController.index)
   .post(ItemController.create);
 
-ApiRouter.route("/items/:id")
+ApiRouter.route('/items/:id')
   .get(ItemController.read)
   .put(ItemController.update)
   .delete(ItemController.delete);
 
 const routes = {
-  api: ApiRouter
+  api: ApiRouter,
 };
 
 export default routes;

@@ -1,8 +1,8 @@
-import "../assets/scss/app.scss";
-import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import StartPage from "./StartPage";
-import AboutPage from "./AboutPage";
+import '../assets/scss/app.scss';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import StartPage from './StartPage';
+import AboutPage from './AboutPage';
 
 class App extends React.PureComponent {
   render() {

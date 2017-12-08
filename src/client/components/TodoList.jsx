@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TodoListItem from './TodoListItem';
+import TodoListItem from 'client/components/TodoListItem';
 
 class TodoList extends React.PureComponent {
   render() {

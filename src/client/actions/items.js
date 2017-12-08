@@ -1,5 +1,5 @@
-import ApiClient from '../ApiClient';
-import * as actionTypes from '../actionsTypes';
+import ApiClient from 'client/ApiClient';
+import * as actionTypes from 'client/actionsTypes';
 
 const receiveItems = items => ({
   type: actionTypes.RECEIVE_ITEMS,

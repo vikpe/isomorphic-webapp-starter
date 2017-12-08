@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import compression from 'compression';
-import routes from './routes';
+import routes from 'server/routes';
 
 const customMiddleware = {
   allowLocalhostCors: () => (request, response, next) => {

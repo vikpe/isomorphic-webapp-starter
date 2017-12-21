@@ -18,8 +18,8 @@ The client consumes data from the server via a REST API.
   * [Heroku](#heroku)
 
 ## Features
-* Automatically inject client-side changes to browser // [Hot Module Replacement (HMR)](https://webpack.js.org/guides/hmr-react/) 
-* Automatically restart server on server-side changes // [nodemon](https://nodemon.io/) 
+* Automatically inject client-side changes to browser // [Hot Module Replacement (HMR)](https://webpack.js.org/guides/hmr-react/)
+* Automatically restart server on server-side changes // [nodemon](https://nodemon.io/)
 * Automatically run tests on code changes (+ display code coverage) // [Jest](https://github.com/facebook/jest)
 * Client _and_ server side ES6 support // [Babel](http://babeljs.io/).
 * Production build script (minify and hash builds) // [Webpack](https://webpack.js.org/).
@@ -38,10 +38,8 @@ The client consumes data from the server via a REST API.
 
 ### Development
 
-`npm run start-dev`
-
-* Builds client continously (HMR enabled) served @ `http://localhost:8080` 
-* Restarts server continously (nodemon enabled) served @ `http://localhost:3000` 
+* `npm run start-client-dev` - Build client continously (HMR enabled) serve @ `http://localhost:8080`
+* `npm run start-server-dev` - Restart server continously (nodemon enabled) serve @ `http://localhost:3000`
 
 ### Production
 
@@ -57,13 +55,12 @@ The client consumes data from the server via a REST API.
 
 Command | Description
 --- | ---
-`npm run build` | Build app (client + server) 
-`npm run build-client` | Build client (`/dist/public/js/client.[hash].min.js`) 
+`npm run build` | Build app (client + server)
+`npm run build-client` | Build client (`/dist/public/js/client.[hash].min.js`)
 `npm run build-server` | Build server (`/dist/server.min.js`)
 `npm run clean-dist` | Clean dist, all files (client and server)
 `npm run clean-dist-client` | Clean dist client files (`/dist/public/*`)
 `npm run clean-dist-server` | Clean dist server files (`/dist/server.min.js`)
-`npm run start-dev` | (see description above)
 `npm run start-prod` | (see description above)
 `npm run start-client-dev` | Build client continously (HMR enabled) serve @ `http://localhost:8080`
 `npm run start-server-dev` | Restart server continously (nodemon enabled) serve @ `http://localhost:3000`

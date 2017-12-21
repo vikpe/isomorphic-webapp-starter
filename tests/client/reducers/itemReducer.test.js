@@ -2,7 +2,7 @@ import * as actionsTypes from 'client/actionsTypes';
 import itemReducer from 'client/reducers/itemReducer';
 
 describe('itemReducer', () => {
-  test('initial state', () => {
+  test('should handle defaulte case (initial state)', () => {
     const initialState = undefined;
     const action = { type: 'DEFAULT_CASE' };
     const resultState = itemReducer(initialState, action);

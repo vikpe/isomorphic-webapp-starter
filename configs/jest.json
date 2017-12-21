@@ -2,7 +2,8 @@
   "rootDir": "..",
   "coverageDirectory": "<rootDir>/tests/__coverage__/",
   "setupFiles": [
-    "<rootDir>/tests/__mocks__/polyfills.js"
+    "<rootDir>/tests/__mocks__/polyfills.js",
+    "<rootDir>/configs/jest.setup.js"
   ],
   "roots": [
     "<rootDir>/src/",

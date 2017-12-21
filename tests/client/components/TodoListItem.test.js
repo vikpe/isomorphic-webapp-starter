@@ -6,7 +6,7 @@ import TodoListItem from 'client/components/TodoListItem';
 describe('<TodoListItem />', () => {
   test('renders', () => {
     const props = {
-      item: { title: 'Alpha' },
+      item: { _id: 7, title: 'Alpha' },
       onDeleteClick: sinon.spy(),
     };
     const wrapper = shallow(<TodoListItem {...props} />);
@@ -23,7 +23,7 @@ describe('<TodoListItem />', () => {
 
   test('triggers onDeleteClick', () => {
     const props = {
-      item: { title: 'Alpha' },
+      item: { _id: 7, title: 'Alpha' },
       onDeleteClick: sinon.spy(),
     };
     const wrapper = shallow(<TodoListItem {...props} />);
@@ -31,6 +31,6 @@ describe('<TodoListItem />', () => {
       .find('a')
       .first()
       .simulate('click');
-    sinon.assert.calledOnce(props.onDeleteClick);
+    sinon.assert.calledWithExactly(props.onDeleteClick, 7);
   });
 });

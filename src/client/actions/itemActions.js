@@ -3,7 +3,7 @@ import * as actionTypes from 'client/actionsTypes';
 
 const receiveItems = items => ({
   type: actionTypes.RECEIVE_ITEMS,
-  items: items,
+  payload: { items },
 });
 
 export function createItem(item) {

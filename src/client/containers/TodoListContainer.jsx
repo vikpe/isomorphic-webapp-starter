@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TodoList from 'client/components/TodoList';
 
-import { createItem, getItems, deleteItem } from 'client/actions/items';
+import { createItem, getItems, deleteItem } from 'client/actions/itemActions';
 
 class TodoListContainer extends React.Component {
   componentDidMount() {

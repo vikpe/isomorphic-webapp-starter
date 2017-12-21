@@ -1,11 +1,11 @@
 import * as actionTypes from 'client/actionsTypes';
 
-const initialState = [];
+export const initialState = [];
 
 const itemReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.RECEIVE_ITEMS: {
-      return action.items;
+      return action.payload.items;
     }
     default: {
       return state;

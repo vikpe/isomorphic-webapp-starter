@@ -1,6 +1,6 @@
 import React from 'react';
 import * as itemActions from 'client/actions/itemActions';
-import * as actionTypes from '../../../src/client/actionsTypes';
+import * as actionTypes from 'client/actionsTypes';
 
 describe('itemActions', () => {
   describe('sync actions', () => {

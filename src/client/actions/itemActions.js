@@ -1,7 +1,7 @@
 import ApiClient from 'client/ApiClient';
 import * as actionTypes from 'client/actionsTypes';
 
-const receiveItems = items => ({
+export const receiveItems = items => ({
   type: actionTypes.RECEIVE_ITEMS,
   payload: { items },
 });

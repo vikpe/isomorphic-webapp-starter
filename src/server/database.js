@@ -18,9 +18,7 @@ const database = {
       console.log(error);
     };
 
-    mongoose
-      .connect(mongoDbUri, { useMongoClient: true })
-      .then(onSuccess, onError);
+    mongoose.connect(mongoDbUri).then(onSuccess, onError);
   },
 };
 

@@ -16,7 +16,7 @@ module.exports = {
     extensions: ['.js'],
     modules: [resolve(__dirname, 'src'), 'node_modules'],
   },
-  devtool: 'source-map',
+  devtool: false,
   module: {
     rules: [
       {
@@ -33,7 +33,7 @@ module.exports = {
         MONGODB_URI: JSON.stringify(process.env.MONGODB_URI),
         APP_URI: JSON.stringify(process.env.APP_URI),
         PORT: JSON.stringify(process.env.PORT),
-      },
+      }
     }),
     new MinifyPlugin({}, {comments: false}),
   ],

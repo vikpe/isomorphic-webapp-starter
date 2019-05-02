@@ -8,13 +8,13 @@ const commonClientConfig = require('./client.common');
 module.exports = merge(commonClientConfig, {
   mode: 'production',
   entry: './client/index.prod.jsx',
-  devtool: 'source-map',
+  devtool: false,
   plugins: [
-    new MinifyPlugin({}, {comments: false}),
+    new MinifyPlugin({}, { comments: false }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
-      },
+      }
     }),
   ],
 });

@@ -24,9 +24,9 @@ const ItemController = {
   },
 
   read: (request, response) => {
-    const conditions = { _id: request.params.id };
+    const itemId = request.params.id;
 
-    Item.findOne(conditions, (error, itemDoc) => {
+    Item.findById(itemId, (error, itemDoc) => {
       if (error) {
         response.send(error);
       } else {
@@ -36,9 +36,9 @@ const ItemController = {
   },
 
   update: (request, response) => {
-    const conditions = { _id: request.params.id };
+    const itemId = request.params.id;
 
-    Item.findOneAndUpdate(conditions, request.body, error => {
+    Item.findByIdAndUpdate(itemId, request.body, error => {
       if (error) {
         response.send(error);
       } else {
@@ -48,9 +48,9 @@ const ItemController = {
   },
 
   delete: (request, response) => {
-    const conditions = { _id: request.params.id };
+    const itemId = request.params.id;
 
-    Item.findOneAndRemove(conditions, error => {
+    Item.findByIdAndDelete(itemId, error => {
       if (error) {
         response.send(error);
       } else {

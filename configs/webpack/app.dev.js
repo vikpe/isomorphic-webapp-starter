@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const commonClientConfig = require('./client.common');
 
 module.exports = merge(commonClientConfig, {
+  mode: 'development',
   entry: [
     'react-hot-loader/patch', // HMR for React
     'webpack-dev-server/client?http://localhost:8080',// bundle the client for webpack-dev-server and connect to the provided endpoint

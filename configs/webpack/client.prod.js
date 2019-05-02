@@ -6,6 +6,7 @@ const MinifyPlugin = require('babel-minify-webpack-plugin');
 const commonClientConfig = require('./client.common');
 
 module.exports = merge(commonClientConfig, {
+  mode: 'production',
   entry: './client/index.prod.jsx',
   devtool: 'source-map',
   plugins: [

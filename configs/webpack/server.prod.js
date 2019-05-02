@@ -5,6 +5,7 @@ const {resolve} = require('path');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = {
+  mode: 'production',
   target: 'node',
   entry: './src/server/index.js',
   output: {

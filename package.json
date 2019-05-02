@@ -5,8 +5,8 @@
   "scripts": {
     "start": "npm run start-server-prod",
     "build": "npm run build-client && npm run build-server",
-    "build-client": "npm run clean-dist-client && webpack --config configs/webpack/client.prod --define process.env.NODE_ENV='production'",
-    "build-server": "npm run clean-dist-server && webpack --config configs/webpack/server.prod --define process.env.NODE_ENV='production'",
+    "build-client": "npm run clean-dist-client && webpack --config configs/webpack/client.prod",
+    "build-server": "npm run clean-dist-server && webpack --config configs/webpack/server.prod",
     "clean-dist": "npm run clean-dist-client && npm run clean-dist-server",
     "clean-dist-client": "rm -f -r -d dist/public",
     "clean-dist-server": "rm -f dist/server.*",

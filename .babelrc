@@ -1,7 +1,7 @@
 {
   "presets": [
-    ["env", {"modules": false}],
-    "react" // Transpile React components to JavaScript
+    ["@babel/preset-env", {"modules": false}],
+    "@babel/preset-react" // Transpile React components to JavaScript
   ],
   "plugins": [
     "react-hot-loader/babel", // Enables React code to work with HMR.
@@ -21,10 +21,10 @@
       "presets": ["minify"]
     },
     "test": {
-      "presets": ["env", "react"],
+      "presets": ["@babel/preset-env", "@babel/preset-react"],
       "plugins": [
         "transform-object-rest-spread",
-        "transform-es2015-modules-commonjs"
+        "@babel/plugin-transform-modules-commonjs"
       ]
     }
   }

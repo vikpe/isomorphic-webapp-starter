@@ -35,6 +35,5 @@ module.exports = {
         PORT: JSON.stringify(process.env.PORT),
       }
     }),
-    new MinifyPlugin({}, {comments: false}),
   ],
 };

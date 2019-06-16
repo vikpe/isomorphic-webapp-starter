@@ -7,7 +7,7 @@ const commonClientConfig = require('./client.common');
 
 module.exports = merge(commonClientConfig, {
   mode: 'production',
-  entry: './client/index.prod.jsx',
+  entry: './client/index.jsx',
   devtool: false,
   plugins: [
     new MinifyPlugin({}, { comments: false }),

@@ -8,8 +8,8 @@
     "build-client": "npm run clean-dist-client && webpack --config configs/webpack/client.prod",
     "build-server": "npm run clean-dist-server && webpack --config configs/webpack/server.prod",
     "clean-dist": "npm run clean-dist-client && npm run clean-dist-server",
-    "clean-dist-client": "rm -f -r -d dist/public",
-    "clean-dist-server": "rm -f dist/server.*",
+    "clean-dist-client": "rimraf dist/public",
+    "clean-dist-server": "rimraf dist/server.*",
     "start-prod": "npm run build && npm run start-server-prod",
     "start-client-dev": "webpack-dev-server --config configs/webpack/app.dev",
     "start-server-dev": "nodemon -q --watch src/server src/server/index.js --exec babel-node --presets @babel/preset-env",
@@ -76,5 +76,7 @@
     "webpack-dev-server": "^3.7.2",
     "webpack-merge": "^4.2.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "rimraf": "^2.6.3"
+  }
 }

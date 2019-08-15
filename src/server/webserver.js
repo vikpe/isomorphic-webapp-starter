@@ -12,9 +12,7 @@ const webserver = {
 
     app.listen(port, () => {
       console.log(
-        chalk`{green.bold Server started:} {white ${
-          process.env.APP_URI
-        } (port: ${port})} {grey (/dist/public/)}`,
+        chalk`{green.bold Server started:} {white ${process.env.APP_URI} (port: ${port})} {grey (/dist/public/)}`,
       );
     });
   },

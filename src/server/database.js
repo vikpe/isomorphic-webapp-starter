@@ -18,7 +18,10 @@ const database = {
       console.log(error);
     };
 
-    const connectOptions = { useNewUrlParser: true };
+    const connectOptions = {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    };
     mongoose.connect(mongoDbUri, connectOptions).then(onSuccess, onError);
   },
 };

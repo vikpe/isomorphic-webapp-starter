@@ -26,7 +26,7 @@ const customMiddleware = {
   },
 };
 
-export const applyMiddleware = app => {
+export const applyMiddleware = (app) => {
   // request related
   if (process.env.APP_URI.includes('://localhost')) {
     app.use(customMiddleware.allowLocalhostCors());

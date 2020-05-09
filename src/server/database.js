@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 mongoose.Promise = global.Promise;
 
 const database = {
-  connect: callback => {
+  connect: (callback) => {
     const mongoDbUri = process.env.MONGODB_URI;
 
     const onSuccess = () => {
@@ -13,7 +13,7 @@ const database = {
       callback();
     };
 
-    const onError = error => {
+    const onError = (error) => {
       console.log(chalk`{red.bold MongoDB error:} {white ${mongoDbUri}}`);
       console.log(error);
     };

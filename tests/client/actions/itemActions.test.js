@@ -15,7 +15,7 @@ describe('itemActions', () => {
     });
   });
 
-  describe('async actions', function() {
+  describe('async actions', function () {
     test.skip('createItem', () => {});
 
     test.skip('deleteItem', () => {});

@@ -13,12 +13,7 @@ describe('<TodoListItem />', () => {
 
     expect(wrapper.find('div.app-todo-list-item').length).toEqual(1);
     expect(wrapper.find('a').length).toEqual(1);
-    expect(
-      wrapper
-        .find('div')
-        .first()
-        .text(),
-    ).toContain('Alpha');
+    expect(wrapper.find('div').first().text()).toContain('Alpha');
   });
 
   test('triggers onDeleteClick', () => {
@@ -27,10 +22,7 @@ describe('<TodoListItem />', () => {
       onDeleteClick: sinon.spy(),
     };
     const wrapper = shallow(<TodoListItem {...props} />);
-    wrapper
-      .find('a')
-      .first()
-      .simulate('click');
+    wrapper.find('a').first().simulate('click');
     sinon.assert.calledWithExactly(props.onDeleteClick, 7);
   });
 });

@@ -38,7 +38,7 @@ const ItemController = {
   update: (request, response) => {
     const itemId = request.params.id;
 
-    Item.findByIdAndUpdate(itemId, request.body, error => {
+    Item.findByIdAndUpdate(itemId, request.body, (error) => {
       if (error) {
         response.send(error);
       } else {
@@ -50,7 +50,7 @@ const ItemController = {
   delete: (request, response) => {
     const itemId = request.params.id;
 
-    Item.findByIdAndDelete(itemId, error => {
+    Item.findByIdAndDelete(itemId, (error) => {
       if (error) {
         response.send(error);
       } else {

@@ -13,7 +13,7 @@ class TodoListContainer extends React.Component {
   render() {
     const { dispatch, items } = this.props;
 
-    const onDeleteClick = id => dispatch(deleteItem(id));
+    const onDeleteClick = (id) => dispatch(deleteItem(id));
     const onCreateClick = () =>
       dispatch(createItem({ title: `Item ${1 + items.length}` }));
 
@@ -34,7 +34,7 @@ TodoListContainer.propTypes = {
   items: PropTypes.array,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   items: state.items,
 });
 

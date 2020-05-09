@@ -8,8 +8,12 @@ class TodoList extends React.PureComponent {
 
     return (
       <div className="app-todo-list">
-        {this.props.items.map(item => (
-          <TodoListItem key={item._id} onDeleteClick={onDeleteClick} item={item} />
+        {this.props.items.map((item) => (
+          <TodoListItem
+            key={item._id}
+            onDeleteClick={onDeleteClick}
+            item={item}
+          />
         ))}
       </div>
     );

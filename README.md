@@ -80,12 +80,6 @@ Make sure that Node and MongoDB are installed and running.
 2. Copy / deploy `/dist/` to a folder on your server.
 3. Run app: `npm run start-server-prod`
 
-### Heroku
-This starter can easily be deployed on [Heroku](https://www.heroku.com/).
-
-* **Demo**: [Isomorphic Webapp Starter on Heroku](https://isomorphic-webapp-starter.herokuapp.com/)
-* **Code**: See the [`deploy-heroku`](https://github.com/vikpe/isomorphic-webapp-starter/tree/deploy-heroku) branch.
-
 ## See also
 * [React Webpack Babel Starter](https://github.com/vikpe/react-webpack-babel-starter)
 * [React Webpack Typescript Starter](https://github.com/vikpe/react-webpack-typescript-starter)
